@@ -32,11 +32,15 @@ function App() {
   }
 
   // renders
-  const denElements = dens.map((den, index) => {
-    return (
-      <Mole key={`mole-${index}`} />
-    )
-  })
+const denElements = dens.map((den, index) => {
+  return (
+    <Mole 
+      key={`mole-${index}`} 
+      isMoleVisible={den.isMoleVisible} 
+      onMoleWhacked={onMoleWhacked} 
+    />
+  )
+})
 
   return (
     <div className="App">
